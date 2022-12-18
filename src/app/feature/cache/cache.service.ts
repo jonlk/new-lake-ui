@@ -12,10 +12,14 @@ export class CacheService {
   constructor(private httpClient: HttpClient) { }
 
   setCacheItem(cacheItem: ICacheItem) {
-    return this.httpClient.post(`${environment.applicationUrl}/cache/set`, cacheItem);
+
+    return this.httpClient
+      .post(`${environment.applicationUrl}/cache/set`,
+        cacheItem, { observe: 'response' });
   }
 
   getCacheItem(key: string): Observable<ICacheItem> {
-    return this.httpClient.get<ICacheItem>(`${environment.applicationUrl}/cache/${key}`);
+    return this.httpClient
+      .get<ICacheItem>(`${environment.applicationUrl}/cache/${key}`);
   }
 }

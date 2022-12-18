@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CacheService } from './cache.service';
 import { ICacheItem } from './model';
+import { map, tap } from 'rxjs';
 
 @Component({
   selector: 'app-cache',
@@ -8,6 +9,8 @@ import { ICacheItem } from './model';
   styleUrls: ['./cache.component.css']
 })
 export class CacheComponent implements OnInit {
+
+  locationUrl: string | null = ``;
 
   constructor(private cacheService: CacheService) { }
 
@@ -17,12 +20,13 @@ export class CacheComponent implements OnInit {
 
     var cacheItem: ICacheItem = {
       key: "key01",
-      value: "value from angular app"
+      value: "value from angular app updated"
     }
 
     this.cacheService
       .setCacheItem(cacheItem)
-      .subscribe();
+      .subscribe(resp => {
+        this.locationUrl = resp.headers.get(`Location`)
+      });
   }
-
 }
