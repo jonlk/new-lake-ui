@@ -7,6 +7,9 @@ import { CacheComponent } from './cache/cache.component';
 import { DataComponent } from './data/data.component';
 import { QueueComponent } from './queue/queue.component';
 
+// material
+import { MatGridListModule } from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [
     CacheComponent,
@@ -15,7 +18,8 @@ import { QueueComponent } from './queue/queue.component';
   ],
   imports: [
     CommonModule,
-    FeatureRoutingModule    
+    FeatureRoutingModule,
+    MatGridListModule
   ]
 })
 export class FeatureModule { }
