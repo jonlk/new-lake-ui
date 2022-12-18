@@ -3,10 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  applicationUrl: "http://new-lake.local:31501/api"
 };
 
-export const APPLICATION_API_URL = "http://new-lake.local/api";
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
