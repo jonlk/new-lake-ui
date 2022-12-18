@@ -1,0 +1,8 @@
+.app-toolbar{
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000;
+    box-shadow: 1px 1px 8px 1px rgb(51, 51, 51);
+    background-color: rgb(53, 38, 98);
+}
