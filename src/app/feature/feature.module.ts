@@ -9,6 +9,7 @@ import { QueueComponent } from './queue/queue.component';
 
 // material
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
   imports: [
     CommonModule,
     FeatureRoutingModule,
-    MatGridListModule
+    MatGridListModule,
+    MatButtonModule
   ]
 })
 export class FeatureModule { }
