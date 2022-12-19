@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: new-lake-ui
-        image: vertwave/new-lake-ui:latest
+        image: vertwave/new-lake-ui:1.0.0
         ports:
         - containerPort: 80
         resources:
